@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+        <title>DigiBank Application</title>
+    </h:head>
+    <h:body>
+    	<h2>Money Transfer System</h2>
+    	<h:form>
+    		<h:panelGrid columns="2" >
+    		<h:outputLabel value="Account No : "/>
+    	   <h:inputText value="#{digibankcontroller.digibank.accountNumber}"></h:inputText>
+    	   <h:outputLabel value="Amount : "/>
+    	   <h:inputText value="#{digibankcontroller.digibank.amount}"></h:inputText>
+    	   <h:outputLabel value="Destation Country : "/>
+    	   <h:inputText value="#{digibankcontroller.digibank.destationCountry}">
+               </h:inputText>
+               <h:outputLabel value="Destation Bank : "/>
+    	   <h:inputText value="#{digibankcontroller.digibank.destinationBank}">
+               </h:inputText>
+               <h:outputLabel value="Name : "/>
+    	   <h:inputText value="#{digibankcontroller.digibank.name}">
+               </h:inputText>
+               <h:outputLabel value="Source Passport : "/>
+    	   <h:inputText value="#{digibankcontroller.digibank.sourcePassport}">
+               </h:inputText>
+               <h:outputLabel value="Transcation Code : "/>
+    	   <h:inputText value="#{digibankcontroller.digibank.transactionCode}">
+               </h:inputText>
+    	   </h:panelGrid>
+    	   <h:commandButton value="submit" action="#{digibankcontroller.addNewEmployee}"></h:commandButton>
+    	</h:form>
+    </h:body>
+</html>

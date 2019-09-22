@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\sharon83\Desktop\210141529_DigiBank\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+862604396.index
+728776876.index
+2023062966.index
+4069024627.index
+3008208686.index
+181159876.index
+2673305761.index

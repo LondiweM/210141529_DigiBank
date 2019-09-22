@@ -1,0 +1,24 @@
+package entities;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name="digibank_table")
+public class DigiBankEntities {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private String Name;
+	private  String SourcePassport;
+	private String DestinationPassport;
+	private String DestinationBank;
+	private String DestationCountry;
+	private int AccountNumber;
+	private double Amount;
+	private int TransactionCode;
+	
+	
+}

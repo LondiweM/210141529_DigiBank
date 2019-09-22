@@ -1,0 +1,27 @@
+package service;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import entities.DigiBankEntities;
+
+/**
+ * Session Bean implementation class DigiBankEJB
+ */
+@Stateless
+@LocalBean
+public class DigiBankEJB {
+	@PersistenceContext
+	private EntityManager em;
+  
+    public DigiBankEJB() {
+        // TODO Auto-generated constructor stub
+    }
+    public void AddNew(DigiBankEntities digibankentities)
+    {
+    	System.out.println("Adding Yee");
+    	em.persist(digibankentities);
+    }
+}

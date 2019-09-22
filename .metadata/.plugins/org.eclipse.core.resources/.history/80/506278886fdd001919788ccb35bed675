@@ -1,0 +1,59 @@
+<h:body>
+	<h2 style="color:red">INTERNATIONAL MONEY TRANSFERS</h2>
+	<h:dataTable id="books"
+    columnClasses="list-column-center,
+        list-column-right, list-column-center,
+        list-column-right" headerClass="list-header"
+        rowClasses="list-row"
+    styleClass="list-background"
+    value="#{digibankController.TransList}" var="y">   
+
+    <h:column>
+        <f:facet style="color:red" name="header">
+            <h:outputText value="Name" />
+        </f:facet>
+        <h:outputText value="#{y.name}"/>
+    </h:column>
+    <h:column>                       
+        <f:facet name="header">
+            <h:outputText value="Source passwport" />
+        </f:facet>
+        <h:outputText value="#{y.sourcePassport}"/>
+    </h:column>
+    <h:column>                       
+        <f:facet name="header">
+            <h:outputText value="Destination passport" />
+        </f:facet>
+        <h:outputText value="#{y.destinationPassport}"/>
+    </h:column>
+    <h:column>                       
+        <f:facet name="header">
+            <h:outputText value="Destination bank" />
+        </f:facet>
+        <h:outputText value="#{y.destinationBank}"/>
+    </h:column>
+    <h:column>                       
+        <f:facet name="header">
+            <h:outputText value="Destination country" />
+        </f:facet>
+        <h:outputText value="#{y.destationCountry}"/>
+    </h:column>
+    <h:column>                       
+        <f:facet name="header">
+            <h:outputText value="Account number" />
+        </f:facet>
+        <h:outputText value="#{y.accNumber}"/>
+    </h:column>
+    <h:column>                       
+        <f:facet name="header">
+            <h:outputText value="Amount" />
+        </f:facet>
+        <h:outputText value="#{y.amount}"/>
+    </h:column>
+
+</h:dataTable>
+ 
+	<h:form>
+		<h:commandButton value="Go Back" action="#{personcontroller.gotoAdd}"></h:commandButton>
+	</h:form>
+</h:body>

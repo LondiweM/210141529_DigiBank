@@ -1,0 +1,53 @@
+package controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ejb.EJB;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+
+import entities.DigiBankEntities;
+import model.DigiBank;
+import service.DigiBankEJB;
+
+
+@ManagedBean(name="digibankcontroller")
+@SessionScoped
+public class DigiBankController {
+
+	@EJB
+	DigiBankEJB  digibankservices;
+	
+	@ManagedProperty(value="#{digibank}")
+	private DigiBank digibank;
+	
+	
+	public void addNewEmployee()
+	{
+		System.out.println("Sharon Lets see");
+		digibankservices.AddNew(digibank.getEntity());
+	
+	}
+	public DigiBank getDigibank() {
+		return digibank;
+	}
+	public void setDigibank(DigiBank digibank) {
+		this.digibank = digibank;
+	}
+private List<DigiBankEntities> translist = new ArrayList<>();
+    
+    public List<DigiBankEntities> TransList() {
+    	translist = digibankservices.findTransactions();
+        return translist;
+    }
+    
+   public String viewEmployee(){
+        return "ViewList.xhtml";
+    }
+   
+   
+
+	
+}
